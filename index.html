@@ -197,13 +197,15 @@ From Milk to Meat explores the journey beyond spiritual infancy and into maturit
 
 </section>
 
-<iframe
-src="footer.html"
-style="
-width:100%;
-border:none;
-height:260px;">
-</iframe>
+<div id="footer"></div>
+
+<script>
+fetch("footer.html")
+.then(response => response.text())
+.then(data => {
+document.getElementById("footer").innerHTML = data;
+});
+</script>
 
 </body>
 
