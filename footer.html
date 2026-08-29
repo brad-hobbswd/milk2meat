@@ -64,21 +64,13 @@ Readers who have been encouraged, blessed, or helped through these writings and 
 
 <div class="donation-buttons">
 
-<a
-href="https://cash.app/$brad1gabe"
-target="_blank"
-rel="noopener noreferrer"
-class="donate-btn">
+<a href="https://cash.app/$brad1gabe" target="_blank" rel="noopener noreferrer" class="donate-btn">
 
 Cash App
 
 </a>
 
-<a
-href="https://paypal.me/brad1god"
-target="_blank"
-rel="noopener noreferrer"
-class="donate-btn">
+<a href="https://paypal.me/brad1god" target="_blank" rel="noopener noreferrer" class="donate-btn">
 
 PayPal
 
@@ -118,15 +110,20 @@ Thank you for visiting, reading, sharing these resources with others, and being 
 
 <style>
 
+html,
+body{
+
+margin:0;
+padding:0;
+background:#161b22;
+
+}
+
 footer{
 
 margin-top:60px;
-
 background:#161b22;
-
-border-top:
-1px solid #2a2f36;
-
+border-top:1px solid #2a2f36;
 padding:45px 25px;
 
 }
@@ -134,11 +131,8 @@ padding:45px 25px;
 .footer-container{
 
 max-width:1000px;
-
 margin:auto;
-
 text-align:center;
-
 font-family:Georgia,serif;
 
 }
@@ -146,9 +140,7 @@ font-family:Georgia,serif;
 .footer-container h3{
 
 color:#d9b26c;
-
-margin-bottom:10px;
-
+margin:0 0 10px;
 font-size:1.6rem;
 
 }
@@ -156,9 +148,7 @@ font-size:1.6rem;
 .footer-container p{
 
 color:#d5d5d5;
-
-margin-bottom:20px;
-
+margin:0 0 20px;
 line-height:1.8;
 
 }
@@ -166,13 +156,9 @@ line-height:1.8;
 .footer-links{
 
 display:flex;
-
 justify-content:center;
-
 gap:30px;
-
 flex-wrap:wrap;
-
 margin-bottom:25px;
 
 }
@@ -180,29 +166,32 @@ margin-bottom:25px;
 .footer-links a{
 
 color:#d5d5d5;
-
 text-decoration:none;
-
 transition:.3s;
 
 }
 
-.footer-links a:hover{
+.footer-links a:hover,
+.footer-links a:focus-visible{
 
 color:#d9b26c;
+
+}
+
+.footer-links a:focus-visible,
+.donate-btn:focus-visible{
+
+outline:3px solid #d9b26c;
+outline-offset:3px;
 
 }
 
 .footer-divider{
 
 width:120px;
-
 height:1px;
-
 border:none;
-
 background:#2a2f36;
-
 margin:30px auto;
 
 }
@@ -210,9 +199,7 @@ margin:30px auto;
 .support-title{
 
 color:#d9b26c;
-
-margin-bottom:20px;
-
+margin:0 0 20px;
 font-size:1.6rem;
 
 }
@@ -220,13 +207,9 @@ font-size:1.6rem;
 .donation-buttons{
 
 display:flex;
-
 justify-content:center;
-
 gap:15px;
-
 flex-wrap:wrap;
-
 margin:30px 0;
 
 }
@@ -234,19 +217,12 @@ margin:30px 0;
 .donate-btn{
 
 display:inline-block;
-
 padding:12px 24px;
-
 background:#d9b26c;
-
 color:#161b22 !important;
-
 text-decoration:none;
-
 font-weight:bold;
-
 border-radius:30px;
-
 transition:.3s;
 
 }
@@ -254,6 +230,7 @@ transition:.3s;
 .donate-btn:hover{
 
 background:#e7c98f;
+transform:translateY(-2px);
 
 }
 
@@ -266,9 +243,90 @@ color:#161b22 !important;
 .copyright{
 
 opacity:.65;
-
 font-size:.95rem;
 
 }
 
+@media(max-width:600px){
+
+footer{
+
+padding:35px 18px;
+margin-top:40px;
+
+}
+
+.footer-container h3,
+.support-title{
+
+font-size:1.4rem;
+
+}
+
+.footer-container p{
+
+font-size:.98rem;
+line-height:1.7;
+
+}
+
+.footer-links{
+
+gap:14px 22px;
+margin-bottom:20px;
+
+}
+
+.footer-divider{
+
+margin:25px auto;
+
+}
+
+.donation-buttons{
+
+margin:25px 0;
+
+}
+
+.donate-btn{
+
+padding:11px 22px;
+
+}
+
+}
+
 </style>
+
+<script>
+
+function resizeFooterFrame(){
+
+if(window.parent === window){
+return;
+}
+
+const height = document.documentElement.scrollHeight;
+
+try{
+
+const frames = window.parent.document.querySelectorAll('iframe[src="footer.html"]');
+
+frames.forEach(function(frame){
+frame.style.height = height + 'px';
+});
+
+}catch(error){
+
+}
+
+}
+
+window.addEventListener('load',resizeFooterFrame);
+window.addEventListener('resize',resizeFooterFrame);
+
+setTimeout(resizeFooterFrame,100);
+setTimeout(resizeFooterFrame,500);
+
+</script>
