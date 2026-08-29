@@ -7,7 +7,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Contents | From Milk to Meat</title>
+<title>
+Contents | From Milk to Meat
+</title>
 
 <meta name="description" content="Contents for From Milk to Meat: The Call to Grow Up in Jesus by Bradley Hobbs">
 
@@ -25,10 +27,6 @@ box-sizing:border-box;
 --gold:#d9b26c;
 --text:#d5d5d5;
 --border:#2a2f36;
-}
-
-html{
-scroll-behavior:smooth;
 }
 
 body{
@@ -96,11 +94,11 @@ margin-top:30px;
 display:inline-block;
 padding:14px 35px;
 background:var(--gold);
-color:#0d1117;
+color:black;
 text-decoration:none;
 font-weight:bold;
 border-radius:30px;
-transition:.3s;
+transition:.4s;
 }
 
 .btn:hover,
@@ -114,12 +112,8 @@ outline:3px solid var(--gold);
 outline-offset:4px;
 }
 
-.footer-frame{
-width:100%;
-border:none;
-display:block;
+#footer{
 margin-top:50px;
-height:620px;
 }
 
 @media(max-width:600px){
@@ -147,9 +141,8 @@ font-size:1rem;
 padding-left:18px;
 }
 
-.footer-frame{
+#footer{
 margin-top:40px;
-height:760px;
 }
 
 }
@@ -163,8 +156,15 @@ height:760px;
 <div class="container">
 
 <div class="top">
-<h1>Contents</h1>
-<p>From Milk to Meat: The Call to Grow Up in Jesus</p>
+
+<h1>
+Contents
+</h1>
+
+<p>
+From Milk to Meat: The Call to Grow Up in Jesus
+</p>
+
 </div>
 
 <div class="contents">
@@ -183,57 +183,26 @@ height:760px;
 </div>
 
 <div class="back">
-<a href="index.html" class="btn">Home</a>
-</div>
 
-<iframe
-src="footer.html"
-class="footer-frame"
-title="Site footer"
-scrolling="no">
-</iframe>
+<a href="index.html" class="btn">
+Home
+</a>
 
 </div>
+
+<div id="footer"></div>
 
 <script>
 
-function resizeFooterFrame(){
-
-const frame=document.querySelector('.footer-frame');
-
-if(!frame){return;}
-
-try{
-
-const height=frame.contentDocument.documentElement.scrollHeight;
-
-if(height>0){
-frame.style.height=(height+4)+'px';
-}
-
-}catch(error){
-
-}
-
-}
-
-window.addEventListener('load',function(){
-
-const frame=document.querySelector('.footer-frame');
-
-if(frame){
-frame.addEventListener('load',resizeFooterFrame);
-}
-
-resizeFooterFrame();
-setTimeout(resizeFooterFrame,250);
-setTimeout(resizeFooterFrame,750);
-
+fetch("footer.html")
+.then(response => response.text())
+.then(data => {
+document.getElementById("footer").innerHTML = data;
 });
 
-window.addEventListener('resize',resizeFooterFrame);
-
 </script>
+
+</div>
 
 </body>
 
