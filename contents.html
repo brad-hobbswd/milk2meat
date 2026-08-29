@@ -5,17 +5,11 @@
 
 <meta charset="UTF-8">
 
-<meta
-name="viewport"
-content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>
-Contents | From Milk to Meat
-</title>
+<title>Contents | From Milk to Meat</title>
 
-<meta
-name="description"
-content="Contents for From Milk to Meat: The Call to Grow Up in Jesus by Bradley Hobbs">
+<meta name="description" content="Contents for From Milk to Meat: The Call to Grow Up in Jesus by Bradley Hobbs">
 
 <style>
 
@@ -26,157 +20,137 @@ box-sizing:border-box;
 }
 
 :root{
-
 --bg:#0d1117;
 --bg2:#161b22;
 --gold:#d9b26c;
 --text:#d5d5d5;
 --border:#2a2f36;
+}
 
+html{
+scroll-behavior:smooth;
 }
 
 body{
-
 background:var(--bg);
-
 font-family:Georgia,serif;
-
 color:var(--text);
-
 line-height:1.7;
-
 padding:30px;
-
 }
 
 .container{
-
 max-width:900px;
-
 margin:auto;
-
 }
 
 .top{
-
 text-align:center;
-
 margin-bottom:40px;
-
 }
 
 .top h1{
-
 font-size:clamp(2rem,6vw,3.5rem);
-
 color:var(--gold);
-
 margin-bottom:10px;
-
 }
 
 .top p{
-
 opacity:.8;
-
 }
 
 .contents{
-
 background:var(--bg2);
-
 border-radius:25px;
-
 padding:25px;
-
-border:
-1px solid var(--border);
-
-box-shadow:
-0 10px 30px
-rgba(0,0,0,.3);
-
+border:1px solid var(--border);
+box-shadow:0 10px 30px rgba(0,0,0,.3);
 }
 
 .contents a{
-
 display:block;
-
 padding:18px;
-
 text-decoration:none;
-
 color:var(--text);
-
 font-size:1.05rem;
-
-border-bottom:
-1px solid var(--border);
-
+border-bottom:1px solid var(--border);
 transition:.3s;
-
 }
 
 .contents a:last-child{
-
 border-bottom:none;
-
 }
 
-.contents a:hover{
-
+.contents a:hover,
+.contents a:focus-visible{
 padding-left:30px;
-
 color:var(--gold);
-
 }
 
 .back{
-
 text-align:center;
-
 margin-top:30px;
-
 }
 
 .btn{
-
 display:inline-block;
-
 padding:14px 35px;
-
 background:var(--gold);
-
-color:black;
-
+color:#0d1117;
 text-decoration:none;
-
 font-weight:bold;
-
 border-radius:30px;
-
-transition:.4s;
-
+transition:.3s;
 }
 
-.btn:hover{
-
+.btn:hover,
+.btn:focus-visible{
 transform:translateY(-3px);
-
 }
 
-footer{
+.contents a:focus-visible,
+.btn:focus-visible{
+outline:3px solid var(--gold);
+outline-offset:4px;
+}
 
-text-align:center;
-
+.footer-frame{
+width:100%;
+border:none;
+display:block;
 margin-top:50px;
+height:620px;
+}
 
-padding-top:25px;
+@media(max-width:600px){
 
-border-top:
-1px solid var(--border);
+body{
+padding:18px;
+}
 
-opacity:.7;
+.top{
+margin-bottom:28px;
+}
+
+.contents{
+padding:12px;
+border-radius:18px;
+}
+
+.contents a{
+padding:15px 12px;
+font-size:1rem;
+}
+
+.contents a:hover,
+.contents a:focus-visible{
+padding-left:18px;
+}
+
+.footer-frame{
+margin-top:40px;
+height:760px;
+}
 
 }
 
@@ -189,106 +163,77 @@ opacity:.7;
 <div class="container">
 
 <div class="top">
-
-<h1>
-
-Contents
-
-</h1>
-
-<p>
-
-From Milk to Meat: The Call to Grow Up in Jesus
-
-</p>
-
+<h1>Contents</h1>
+<p>From Milk to Meat: The Call to Grow Up in Jesus</p>
 </div>
 
 <div class="contents">
 
-<a href="introduction.html">
-
-Introduction
-
-</a>
-
-<a href="preface.html">
-
-Preface
-
-</a>
-
-<a href="dedication.html">
-
-Dedication
-
-</a>
-
-<a href="author.html">
-
-About the Author
-
-</a>
-
-<a href="chapter1.html">
-
-Chapter 1 • When Milk No Longer Satisfies
-
-</a>
-
-<a href="chapter2.html">
-
-Chapter 2 • Chewing Truth When It Hurts
-
-</a>
-
-<a href="chapter3.html">
-
-Chapter 3 • When God Speaks Without Explaining
-
-</a>
-
-<a href="chapter4.html">
-
-Chapter 4 • Becoming Food for Others
-
-</a>
-
-<a href="prayer.html">
-
-Prayer
-
-</a>
-
-<a href="conclusion.html">
-
-Conclusion
-
-</a>
+<a href="introduction.html">Introduction</a>
+<a href="preface.html">Preface</a>
+<a href="dedication.html">Dedication</a>
+<a href="author.html">About the Author</a>
+<a href="chapter1.html">Chapter 1 • When Milk No Longer Satisfies</a>
+<a href="chapter2.html">Chapter 2 • Chewing Truth When It Hurts</a>
+<a href="chapter3.html">Chapter 3 • When God Speaks Without Explaining</a>
+<a href="chapter4.html">Chapter 4 • Becoming Food for Others</a>
+<a href="prayer.html">Prayer</a>
+<a href="conclusion.html">Conclusion</a>
 
 </div>
 
 <div class="back">
-
-<a
-href="index.html"
-class="btn">
-
-Home
-
-</a>
-
+<a href="index.html" class="btn">Home</a>
 </div>
 
 <iframe
 src="footer.html"
-style="
-width:100%;
-border:none;
-height:260px;">
+class="footer-frame"
+title="Site footer"
+scrolling="no">
 </iframe>
 
 </div>
+
+<script>
+
+function resizeFooterFrame(){
+
+const frame=document.querySelector('.footer-frame');
+
+if(!frame){return;}
+
+try{
+
+const height=frame.contentDocument.documentElement.scrollHeight;
+
+if(height>0){
+frame.style.height=(height+4)+'px';
+}
+
+}catch(error){
+
+}
+
+}
+
+window.addEventListener('load',function(){
+
+const frame=document.querySelector('.footer-frame');
+
+if(frame){
+frame.addEventListener('load',resizeFooterFrame);
+}
+
+resizeFooterFrame();
+setTimeout(resizeFooterFrame,250);
+setTimeout(resizeFooterFrame,750);
+
+});
+
+window.addEventListener('resize',resizeFooterFrame);
+
+</script>
 
 </body>
 
