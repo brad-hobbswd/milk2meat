@@ -1,47 +1,34 @@
-# From Milk to Meat: The Call to Grow Up in Jesus
+# From Milk to Meat | Bradley Hobbs
 
-A Christian book by Bradley Hobbs exploring spiritual growth, maturity, obedience, and the journey deeper into Jesus.
+A Christian discipleship project about spiritual growth, moving from foundational understanding toward deeper maturity, study, and faithful practice of Scripture.
 
-This project contains the complete web edition of *From Milk to Meat: The Call to Grow Up in Jesus*, designed as a readable online book experience with chapter navigation, themed pages, and a clean responsive layout.
+## Live Website
+https://brad-hobbswd.github.io/milk2meat/
 
----
+## Overview
+From Milk to Meat: The Call to Grow Up in Jesus by Bradley Hobbs invites readers into a journey of spiritual maturity, obedience, endurance, and growth in Jesus.
 
-## Live Site
+## Pages in This Repository
+- `author.html`
+- `chapter1.html`
+- `chapter2.html`
+- `chapter3.html`
+- `chapter4.html`
+- `conclusion.html`
+- `contents.html`
+- `dedication.html`
+- `introduction.html`
+- `prayer.html`
+- `preface.html`
 
-https://brad-hobbswd.github.io/milk2meat
+## Technology
+Static website published through GitHub Pages, using HTML and included styling, scripts, and supporting assets.
 
----
+## Copyright and Permissions
+Copyright © 2026 Bradley Hobbs. All rights reserved.
 
-## About the Book
+Original manuscript text, chapters, teaching resources, website copy, graphics, visual design, and original source code are protected by copyright. Obtain written permission before reproducing, republishing, modifying, distributing, or commercially using original materials, except where applicable law permits otherwise. Third-party materials remain subject to the rights and terms of their owners.
 
-Spiritual growth begins with a relationship with Jesus, yet growth was never meant to stop at the beginning.
-
-*From Milk to Meat* explores the movement beyond spiritual infancy and into maturity through Scripture, personal experiences, seasons of stretching, obedience, endurance, and transformation.
-
-Readers journey through moments of hunger, correction, silence, faith, and service while discovering how Jesus continues leading believers deeper.
-
----
-
-## Site Structure
-
-```text
-index.html
-contents.html
-
-introduction.html
-preface.html
-dedication.html
-author.html
-
-chapter1.html
-chapter2.html
-chapter3.html
-chapter4.html
-
-prayer.html
-conclusion.html
-
-footer.html
-404.html
-
-banner.jpg
+## Search Engine Files
+- [Sitemap](sitemap.xml)
+- [robots.txt](robots.txt)
